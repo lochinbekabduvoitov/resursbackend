@@ -25,6 +25,19 @@ Route::get('/admin', [AdminController::class , "index"])->middleware('auth');
 
 
 
+// Pride
+
+Route::get('/pride', [AdminController::class , "pride"]);
+Route::post('/uploadpride', [AdminController::class , "uploadpride"]);
+Route::get('/deletepride/{id}', [AdminController::class , "deletepride"]);
+Route::get('/updatepride/{id}', [AdminController::class, 'updatepride' ]);
+Route::post('/updatedpride/{id}', [AdminController::class, 'updatedpride' ]);
+
+
+
+
+
+
 
 
 

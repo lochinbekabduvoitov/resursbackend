@@ -20,7 +20,7 @@
               <span class="nav-link">Dashboard</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="{{url('pride')}}">
                 <span class="menu-title">Faxrimiz</span>
                 <i class="bi bi-trophy  menu-icon"></i>
               </a>
