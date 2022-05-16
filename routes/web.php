@@ -34,6 +34,30 @@ Route::get('/updatepride/{id}', [AdminController::class, 'updatepride' ]);
 Route::post('/updatedpride/{id}', [AdminController::class, 'updatedpride' ]);
 
 
+//ResursMain
+
+Route::get('/resursmain', [AdminController::class , "resursmain"]);
+Route::post('/uploadresursmain', [AdminController::class , "uploadresursmain"]);
+Route::get('/deleteresursmain/{id}', [AdminController::class , "deleteresursmain"]);
+Route::get('/updateresursmain/{id}', [AdminController::class, 'updateresursmain' ]);
+Route::post('/updatedresursmain/{id}', [AdminController::class, 'updatedresursmain' ]);
+
+
+//Resurs
+Route::get('/resurs', [AdminController::class , "resurs"]);
+Route::post('/uploadresurs', [AdminController::class , "uploadresurs"]);
+Route::get('/deleteresurs/{id}', [AdminController::class , "deleteresurs"]);
+Route::get('/updateresurs/{id}', [AdminController::class, 'updateresurs' ]);
+Route::post('/updatedresurs/{id}', [AdminController::class, 'updatedresurs' ]);
+
+
+
+
+
+
+
+
+
 
 
 
