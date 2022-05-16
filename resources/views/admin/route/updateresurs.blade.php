@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+      <base href="/public">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,33 +32,31 @@
        
         <!-- partial -->
         <div class="main-panel">
-       <div class="content-wrapper">
-            
-       <h1 class="text-center m-2">Tizim adminstrator</h1>
+       <div class="content-wrapper">           
             
            
             
-       <table class="table table-bordered">
-
-<tr class="text-center table-primary">
-  <th>T/r</th>
-    <th>Name</th>
-    <th >Email</th>
-    <th >Action</th>
-</tr>
-@foreach($data as $data)
-<tr class="text-center">
-    <th>{{($loop->index+1)}}</th>
-    <td>{{$data->name}}</td>
-    <td >{{$data->email}}</td>              
-     @if($data->usertype=='0')
-     <td ><a class="btn btn-danger" href="{{{url('/deleteuser', $data->id)}}}"><i class="bi bi-trash"></i></a></td>
-     @else
-      <td><a>Not Allowed</a></td>    
-     @endif           
-</tr>
- @endforeach
-</table>
+       <form action="{{url('/updatedresurs', $data->id)}}" method="post" enctype="multipart/form-data">
+        @csrf
+      <div class="form-group">
+        <input style="color:blue" type="text" name="title" placeholder="Resurs title"value="{{$data->title}}" required >
+      </div>
+      <div class="form-group">
+        <input style="color:blue"  type="text"  name="description" placeholder="Description" value="{{$data->description}}" required >
+      </div>
+      <div class="form-group">
+            <input type="text" name="link" placeholder="Resurs Link" value="{{$data->link}}" required>
+        </div>
+      <div class="form-group">
+      <img  height="200" width="200" src="/Resursimages/{{$data->image}}" alt="">
+      </div>
+      <div class="form-group">
+        <input  type="file" name="image"  required >
+      </div>
+      <div class="form-group">
+        <input class="btn btn-outline-primary" type="submit" value="Save">
+      </div>
+      </form>
           </div>
         
           <!-- partial:partials/_footer.html -->

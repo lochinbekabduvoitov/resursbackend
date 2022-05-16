@@ -26,13 +26,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="{{url('resursmain')}}">
                 <span class="menu-title">Resurs Main</span>
                 <i class="bi bi-journals  menu-icon"></i>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="{{url('resurs')}}">
                 <span class="menu-title">Resurs</span>
                 <i class="bi bi-journal-check  menu-icon"></i>
               </a>
