@@ -56,6 +56,16 @@
         </form>
 
 
+        <!-- Resurs content -->
+        <div class="mb-2">
+        <form action="{{url('/searchresurs')}}" method="get">
+          @csrf
+          <input style="border-radius:5px;" placeholder="Search..." type="search" name="search">          
+          <button type="submit" style="color:blue" class="btn btn-outline-success"  ><i class="bi bi-search"></i></button>
+        </form>
+
+        </div>
+
 
 
         <table class="table table-bordered">
@@ -69,6 +79,7 @@
           </tr>
 
         @foreach($data as $data)
+        <tbody>
         <tr align="center">
            <th>{{$loop->index+1}}</th>
            <td>{{$data->title}}</td>
@@ -79,6 +90,7 @@
             <a  class="btn btn-primary" href="{{ url('/updateresurs', $data->id) }}"><i class="bi bi-pencil-square"></i></a>
             </td>            
         </tr>
+        </tbody>
         @endforeach
         </table>
             
@@ -110,5 +122,6 @@
     @include('admin.adminscript')
     <!-- END SCRIPT -->
 
+   
   </body>
 </html>

@@ -17,9 +17,8 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [HomeController::class , "home"]);
 
 Route::get('/admin', [AdminController::class , "index"])->middleware('auth');
 
@@ -49,6 +48,13 @@ Route::post('/uploadresurs', [AdminController::class , "uploadresurs"]);
 Route::get('/deleteresurs/{id}', [AdminController::class , "deleteresurs"]);
 Route::get('/updateresurs/{id}', [AdminController::class, 'updateresurs' ]);
 Route::post('/updatedresurs/{id}', [AdminController::class, 'updatedresurs' ]);
+Route::get('/searchresurs', [AdminController::class, 'searchresurs' ]);
+
+//Resurspage
+
+Route::get('/resurspage', [HomeController::class , "resurspage"]);
+
+
 
 
 
