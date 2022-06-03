@@ -8,6 +8,7 @@ use App\Models\Pride;
 use App\Models\ResursMain;
 use App\Models\Resurs;
 use App\Models\User;
+use DB;
 
 
 class AdminController extends Controller
@@ -203,6 +204,12 @@ class AdminController extends Controller
 
     }
 
+    public function searchresurs(Request $request){
+        $search=$request->search; 
+        $data=Resurs::where('title','Like','%'.$search. '%')->orWhere('description','Like','%'.$search. '%')->get();
+        return view('admin.route.resurs', compact('data'));
+    }
 
+  
 
 }
