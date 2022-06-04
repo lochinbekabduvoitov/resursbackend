@@ -14,92 +14,23 @@
       </div>
       <div class="content">
         <div class="row">
+          @foreach($resursmaindata as $data)
           <div class="">
             <div data-aos="fade-up"
             data-aos-duration="2000"> 
               <div class="card-resurs">
-                <img src="./home/images/seminar.png" alt="">
-                <h5 class="resurs-title">Xalqaro jurnalda maqola</h5>
-                <p class="resurs-text">Qator ilmiy ishlar muallifi Xolmatova Xolidaning “Biologik jarayonlarning
-                  faollashuvi” nomli ilmiy maqolasi nufuzli jurnalda chop etildi.</p>
+                <img style="background-image:url(/ResursMainimages/{{$data->image}});  alt="">
+                <h5 class="resurs-title">{{$data->title}}</h5>
+                <p class="resurs-text">{{$data->description}}</p>
                 <a href="#">
-                  <h2>Batafsil</h2> <img src="./fonts/batafsil.png" alt="">
+                  <h2>Batafsil</h2> <img src="./home/fonts/batafsil.png" alt="">
                 </a>
               </div>  
             </div>
           </div>
-      <div class="">
-        <div data-aos="fade-up"
-        data-aos-duration="2000">
-          <div class="card-resurs">
-            <img src="./home/images/seminar.png" alt="">
-            <h5 class="resurs-title">Xalqaro jurnalda maqola</h5>
-            <p class="resurs-text">Qator ilmiy ishlar muallifi Xolmatova Xolidaning “Biologik jarayonlarning
-              faollashuvi” nomli ilmiy maqolasi nufuzli jurnalda chop etildi.</p>
-            <a href="#">
-              <h2>Batafsil</h2> <img src="./fonts/batafsil.png" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="">
-        <div data-aos="fade-up"
-        data-aos-duration="2000">
-          <div class="card-resurs">
-            <img src="./images/seminar.png" alt="">
-            <h5 class="resurs-title">Xalqaro jurnalda maqola</h5>
-            <p class="resurs-text">Qator ilmiy ishlar muallifi Xolmatova Xolidaning “Biologik jarayonlarning
-              faollashuvi” nomli ilmiy maqolasi nufuzli jurnalda chop etildi.</p>
-            <a href="#">
-              <h2>Batafsil</h2> <img src="./fonts/batafsil.png" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-        <div class="">
-          <div data-aos="fade-up"
-          data-aos-duration="2000">
-            <div class="card-resurs">
-              <img src="./images/seminar.png" alt="">
-              <h5 class="resurs-title">Xalqaro jurnalda maqola</h5>
-              <p class="resurs-text">Qator ilmiy ishlar muallifi Xolmatova Xolidaning “Biologik jarayonlarning
-                faollashuvi” nomli ilmiy maqolasi nufuzli jurnalda chop etildi.</p>
-              <a href="#">
-                <h2>Batafsil</h2> <img src="./fonts/batafsil.png" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="">
-          <div data-aos="fade-up"
-          data-aos-duration="2000">
-            <div class="card-resurs">
-              <img src="./images/seminar.png" alt="">
-              <h5 class="resurs-title">Xalqaro jurnalda maqola</h5>
-              <p class="resurs-text">Qator ilmiy ishlar muallifi Xolmatova Xolidaning “Biologik jarayonlarning
-                faollashuvi” nomli ilmiy maqolasi nufuzli jurnalda chop etildi.</p>
-              <a href="#">
-                <h2>Batafsil</h2> <img src="./fonts/batafsil.png" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-       <div class="">  <div data-aos="fade-up"
-        data-aos-duration="2000">
-          <div class="card-resurs">
-            <img src="./images/seminar.png" alt="">
-            <h5 class="resurs-title">Xalqaro jurnalda maqola</h5>
-            <p class="resurs-text">Qator ilmiy ishlar muallifi Xolmatova Xolidaning “Biologik jarayonlarning
-              faollashuvi” nomli ilmiy maqolasi nufuzli jurnalda chop etildi.</p>
-            <a href="#">
-              <h2>Batafsil</h2> <img src="./fonts/batafsil.png" alt="">
-            </a>
-          </div>
-        </div></div>
+          @endforeach
+    
         
-      
-      
-        </div>
         
-      </div>
+       
     </section>

@@ -7,26 +7,16 @@
      <div class="content">
        <div class="swiper mySwiper">
          <div class="swiper-wrapper">
+           @foreach($pridedata as $data)
            <div class="swiper-slide card">
-             <img src="./home/images/xolida.png" alt="">
+             <img style="background-image:url(/Prideimages/{{$data->image}}); background-size:cover" alt="">
           <div class="card-body">
-           <h5 class="card-title">Xolmatova Xolida</h5>
-           <p class="card-text">
-             Qator ilmiy ishlar muallifi, professor, dotsent, “Buyuk ishlari
-             uchun” granti sohibasi
-           </p>
+           <h5 class="card-title">{{$data->name}}</h5>
+           <p class="card-text">{{$data->description}} </p>
           </div>
            </div>
-           <div class="swiper-slide card">
-             <img src="./home/images/xolida.png" alt="">
-          <div class="card-body">
-           <h5 class="card-title">Xolmatova Xolida</h5>
-           <p class="card-text">
-             Qator ilmiy ishlar muallifi, professor, dotsent, “Buyuk ishlari
-             uchun” granti sohibasi
-           </p>
-          </div>
-           </div>
+           @endforeach
+
          </div>
        </div>
        <div class="icon-main-box  swiper-button-next">
