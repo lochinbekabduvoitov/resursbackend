@@ -9,8 +9,8 @@
          <div class="swiper-wrapper">
            @foreach($pridedata as $data)
            <div class="swiper-slide card">
-             <img style="background-image:url(/Prideimages/{{$data->image}}); background-size:cover" alt="">
-          <div class="card-body">
+             <img style="background-image:url(/Prideimages/{{$data->image}}); background-size:cover;   background-repeat:  no-repeat;" alt="">
+          <div class="card-body " style="height:30%">
            <h5 class="card-title">{{$data->name}}</h5>
            <p class="card-text">{{$data->description}} </p>
           </div>
