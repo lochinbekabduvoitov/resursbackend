@@ -1,1 +1,1 @@
-Laravel resurs backend
+Laravel resurs backend.
